@@ -1,2 +1,20 @@
 @import "tailwindcss";
 
+
+@keyframes gradient-pulse {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.animate-gradient-pulse {
+    animation: gradient-pulse 3s ease-in-out infinite;
+}
