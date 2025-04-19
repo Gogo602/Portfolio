@@ -21,7 +21,7 @@ export default function Navbar() {
         <motion.nav
             initial = {{y:-100}}
             animate = {{y:0}}
-            className='fixed w-full z-50 bg-black/50 back-drop-blur-2xl transition-all duration-300 ease-out px-10'>
+            className='fixed w-full z-50 bg-black/30 back-drop-blur-2xl transition-all duration-300 ease-out px-10'>
             <div className="flex items-center justify-between">
 
                 <div className="max-width-7xl px-6 py-3">
@@ -35,7 +35,7 @@ export default function Navbar() {
                 </div>
             
             <div className="hidden md:flex items-center gap-10">
-                <div className="flex justify-between font-bold items-center  text-gray-50 gap-6 bg-black/80 rounded-full px-4 py-2 border border-white/5 shadow-md shadow-green-800">
+                <div className="flex justify-between font-bold items-center text-gray-50 gap-6 bg-black/10 rounded-full px-4 py-2 border border-white/5 shadow-md shadow-green-800">
                     {
                         navItems.map((items, i) => (
                             <MenuItems key={items.name} index={i} href={items.href}>{items.name}</MenuItems>
