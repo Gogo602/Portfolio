@@ -76,7 +76,7 @@ export default function Navbar() {
                 <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate = {{opacity:1, y:0}}
-                    className="md:hidden mt-4 pb-4 space-y-4"
+                    className="md:hidden mt-4 pb-4 space-y-4 backdrop-filter backdrop-blur-lg"
                 >
                     {
                         navItems.map((item) =>(
@@ -92,19 +92,19 @@ export default function Navbar() {
                     }
 
                     <div className="pt-4 border-t border-white/5 hover:text-green-800">
-                        <div className='flex gap-6'>
-                        <a
-                            href={socialLinks.github}
-                            className='p-2 rounded-lg bg-white/5 hover:bg-green-800 transitions-colors group'>
-                                <GithubIcon className="h-5 w-5 text-gray-50 transition-colors"/>
-                        </a>
-                        <a
-                            href={socialLinks.linkedin}
-                            className='p-2 rounded-lg bg-white/5 hover:bg-green-800 transitions-colors group'>
-                                <LinkedInIcon className="h-5 w-5 text-gray-50 transition-colors"/>
-                        </a>
+                        <div className='flex gap-6 px-4'>
+                            <a
+                                href={socialLinks.github}
+                                className='p-2 rounded-lg bg-white/5 hover:bg-green-800 transitions-colors group'>
+                                    <GithubIcon className="h-5 w-5 text-gray-50 transition-colors"/>
+                            </a>
+                            <a
+                                href={socialLinks.linkedin}
+                                className='p-2 rounded-lg bg-white/5 hover:bg-green-800 transitions-colors group'>
+                                    <LinkedInIcon className="h-5 w-5 text-gray-50 transition-colors"/>
+                            </a>
                        
-                    </div>
+                        </div>
                     </div>
                 </motion.div>
             )}
