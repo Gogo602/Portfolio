@@ -33,7 +33,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.0 }}
-              className='space-x-5'>
+              className='space-x-5 space-y-5'>
               <motion.button
                 whileHover={{scale: 1.05, transition:{duration:0.2}}}
                 className='text-gray-50 px-4 py-1 font-bold rounded-lg bg-gradient-to-r from-green-800 to-gray-800 shadow-md shadow-green-800'>Download Resume</motion.button>
