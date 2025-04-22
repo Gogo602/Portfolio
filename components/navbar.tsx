@@ -26,7 +26,7 @@ export default function Navbar() {
         <motion.nav
             initial = {{y:-100}}
             animate = {{y:0}}
-            className='fixed w-full z-50 bg-black/30 back-drop-blur-2xl transition-all duration-300 ease-out px-10'>
+            className='fixed w-full z-50 bg-black/30  backdrop-filter backdrop-blur-lg transition-all duration-300 ease-out px-10'>
             <div className="flex items-center justify-between">
 
                 <div className="max-width-7xl px-6 py-3">
@@ -76,7 +76,7 @@ export default function Navbar() {
                 <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate = {{opacity:1, y:0}}
-                    className="md:hidden mt-4 pb-4 space-y-4 backdrop-filter backdrop-blur-lg"
+                    className="md:hidden mt-4 pb-4 space-y-4"
                 >
                     {
                         navItems.map((item) =>(
