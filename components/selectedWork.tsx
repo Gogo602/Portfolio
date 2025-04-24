@@ -42,7 +42,7 @@ const projects = [
 
 const SelectedWork = () => {
   return (
-    <section className='py-32 relative id="work"'>
+    <section className='py-32 relative' id="work">
       <div className='max-w-7xl mx-auto px-6'>
         {/* section heading   */}
         <motion.div

@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Hero from '@/components/hero';
 import Navbar from '@/components/navbar'
 import SelectedWork from '@/components/selectedWork'
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <Hero/>
       <SelectedWork />
+      <Footer/>
     </div>
   );
 }
