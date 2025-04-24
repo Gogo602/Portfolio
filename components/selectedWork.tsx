@@ -119,6 +119,19 @@ const SelectedWork = () => {
               ))
               };
           </div>
+
+          {/* view all button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className='flex justify-center mt-20 relative z-[5]'
+          >
+            <button className='relative px-8 py-3 rounded-full bg-surface border border-white/10 hover:border-green-800/10 traansition-all group'>
+              <span className='text-gray-50 transition-colors relative z-[1] font-bold'>View All Projects</span>
+              <div className='absolute inset-0 rounded-full bg-gradient-to-r from-green-800/40 to-gray-800 opacity-0 group-hover:opacity-100 transition-opacity'/>
+            </button>
+          </motion.div>
         </motion.div>
       </div>
     </section>
