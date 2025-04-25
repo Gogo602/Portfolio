@@ -1,11 +1,13 @@
 "use client"
+import { ParticleCanvas } from '@/hooks/particle'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='bg-gradient-to-r from-gray-900 opacity-96 to-green-950 min-h-screen px-10 md:px-20'>
+    <div className='bg-gradient-to-r from-gray-900 opacity-96 to-green-950 min-h-screen relative overflow-hidden px-10 md:px-20'>
+      <ParticleCanvas/>
       <div className='flex flex-col lg:flex-row items-center gap-16'>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -69,7 +71,7 @@ const Hero = () => {
               }}
               className='w-full h-full aspect-square rounded-3xl overflow-hidden border border-white p-5 opacity-50 bg-surface backdrop-blur-sm'
             >
-              <Image src="/Gogo.jpg" alt='Avata' fill className=' scale-110 group-hover:scale-100 transition-transform duration-500' />
+              <Image src="/Gogo.jpg" alt='Avata' fill className=' scale-110 group-hover:scale-100 transition-transform duration-500 z-10' />
               <div
               className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent'
               />
