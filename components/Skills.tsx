@@ -78,7 +78,7 @@ const projects = [
   },
  { 
     tech: [
-      { name: "Next JS", icon: RiNextjsFill, color: "#000000" },
+      { name: "NextJS", icon: RiNextjsFill, color: "#000000" },
     ],
   },
   

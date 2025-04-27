@@ -3,7 +3,7 @@
 import { ArrowUpRightIcon } from '@heroicons/react/16/solid';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { FaReact } from 'react-icons/fa';
 import { SiTailwindcss } from 'react-icons/si';
 
@@ -68,11 +68,23 @@ const projects = [
 
 const SelectedWork = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const projectsSectionRef = useRef(null);
 
   const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
 
+  const handleViewLess = () => {
+    setShowAllProjects(false);
+    // Scroll to the projects section when "View Less" is clicked
+    projectsSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleViewAll = () => { //separate function for view All
+        setShowAllProjects(true);
+  }
+  
+
   return (
-    <section className='py-32 relative' id="work">
+    <section className='py-32 relative' id="work" ref={projectsSectionRef}>
       <div className='max-w-7xl mx-auto px-6'>
         {/* section heading  */}
         <motion.div
@@ -153,7 +165,9 @@ const SelectedWork = () => {
               transition={{ delay: 0.4 }}
               className='flex justify-center mt-20 relative z-[5]'
             >
-              <button onClick={() => setShowAllProjects((prevState) => !prevState)} className='relative px-8 py-3 rounded-full bg-surface border border-white/10 hover:border-green-800/10 traansition-all group'>
+              <button
+                onClick={showAllProjects ? handleViewLess : handleViewAll}
+                className='relative px-8 py-3 rounded-full bg-surface border border-white/10 hover:border-green-800/10 traansition-all group' id='work'>
                 <span className='text-gray-50 transition-colors relative z-[1] font-bold'>
                   {showAllProjects ? 'View Less Projects' : 'View All Projects'}
                 </span>
@@ -168,3 +182,6 @@ const SelectedWork = () => {
 };
 
 export default SelectedWork;
+
+
+
