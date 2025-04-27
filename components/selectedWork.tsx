@@ -3,7 +3,7 @@
 import { ArrowUpRightIcon } from '@heroicons/react/16/solid';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaReact } from 'react-icons/fa';
 import { SiTailwindcss } from 'react-icons/si';
 
@@ -68,20 +68,28 @@ const projects = [
 
 const SelectedWork = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
-  const projectsSectionRef = useRef(null);
+    const projectsSectionRef = useRef<HTMLElement>(null); 
 
-  const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
+    const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
 
-  const handleViewLess = () => {
-    setShowAllProjects(false);
-    // Scroll to the projects section when "View Less" is clicked
-    projectsSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+    const handleViewLess = () => {
+        setShowAllProjects(false);
+        if (projectsSectionRef.current) { // Check if it exists
+            projectsSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
-  const handleViewAll = () => { //separate function for view All
+    const handleViewAll = () => {
         setShowAllProjects(true);
-  }
-  
+    }
+
+    // useEffect to check ref.
+    useEffect(() => {
+        if (projectsSectionRef.current) {
+          //  console.log("Ref is attached:", projectsSectionRef.current);
+        }
+    }, []);
+ 
 
   return (
     <section className='py-32 relative' id="work" ref={projectsSectionRef}>
