@@ -26,7 +26,7 @@ const Experience = () => {
   
 
   return (
-    <section className='py-32 relative' id="skills">
+    <section className='py-32 relative' id="experience">
       <div className='max-w-7xl mx-auto px-6'>
         {/* section heading  */}
         <motion.div
