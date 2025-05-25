@@ -13,9 +13,8 @@ const navItems = [
 ]
 
 const socialLinks = {
-    github: '#',
-    linkedin: '#',
-    twitter: '#'
+    github: 'https://github.com/Gogo602',
+    linkedin: 'https://www.linkedin.com/in/gogo-benson-bb0604308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
 };
 
 export default function Navbar() {
@@ -43,7 +42,7 @@ export default function Navbar() {
                     <div className="flex justify-between font-bold items-center text-gray-50 gap-6 bg-black/10 rounded-full px-4    py-2 border border-white/5 shadow-md shadow-green-800">
                         {
                         navItems.map((items, i) => (
-                            <MenuItems key={items.name} index={i} href={items.href}>{items.name}</MenuItems>
+                              <MenuItems key={items.name} index={i} href={items.href}>{items.name}</ MenuItems>
                         ))
                         }
                     </div>

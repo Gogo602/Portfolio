@@ -1,6 +1,14 @@
 import React from 'react'
 import { GithubIcon, LinkedInIcon } from './socialIcons'
-import { EnvelopeIcon } from '@heroicons/react/16/solid'
+import { FaWhatsapp } from 'react-icons/fa';
+
+
+const socialLinks = {
+    github: 'https://github.com/Gogo602',
+    linkedin: 'https://www.linkedin.com/in/gogo-benson-bb0604308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    whatsapp: 'https://wa.me/+2349164925741'
+};
+
 
 const Footer = () => {
   return (
@@ -40,10 +48,26 @@ const Footer = () => {
                   </div>
                   <div>
                       <h3 className='text-lg font-semibold text-gray-50 mb-4'>Connect</h3>
-                      <ul className='space-x-4 space-y-4 flex md:block'>
-                            <GithubIcon href='#work' className='w-6 h-6 text-gray-100 hover:text-gray-50 transition-colors'/>
-                            <LinkedInIcon href='#work' className='w-6 h-6 text-gray-100 hover:text-gray-50 transition-colors'/>
-                            <EnvelopeIcon href='#work' className='w-6 h-6 text-gray-100 hover:text-gray-50 transition-colors'/>
+                      <ul className='space-x-1  flex md:block'>
+                            <a
+                                href={socialLinks.github}
+                                className=''>
+                                    <GithubIcon className="h-5 w-5 text-gray-50 transition-colors"/>
+                            </a>
+                            <a
+                                href={socialLinks.linkedin}
+                                className=''>
+                                    <LinkedInIcon className="h-5 w-5 text-gray-50 transition-colors"/>
+                            </a>
+                          
+                           <a 
+                                href={socialLinks.whatsapp}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=''>
+                              <FaWhatsapp className="h-5 w-5 text-gray-50 transition-colors" />
+                          </a>
+                      
                       </ul>
                   </div>
                   
