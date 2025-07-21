@@ -10,10 +10,25 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiTailwindcss } from 'react-icons/si';
 import { SiAppwrite } from "react-icons/si";
 import { RiNextjsLine } from "react-icons/ri";
+import { FiFramer } from "react-icons/fi";
+
 
 
 
 const projects = [
+  {
+    title: "Agricon",
+    description: "A Platform that connects farmers to Facilities, like Dryers, cold Rooms and Storage Facilities",
+    live: <Link href='https://agricon.com.ng'>Live</Link>,
+    repo: <Link href="https://github.com/Gogo602/agricon-frontend">Repo</Link>,
+    tech: [
+      { name: "Javacript", icon: IoLogoJavascript, color: "#FFFF00" },
+      { name: "React", icon: FaReact, color: "#61DAFB" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Framer-Motion", icon: FiFramer, color: "#FFFF00" },
+    ],
+    image: '/agriconLand.PNG'
+  },
   {
     title: "Currency Converter",
     description: "Modern Currency converter with Javascript and React",
@@ -28,7 +43,7 @@ const projects = [
   },
 
   {
-    title: "Random Password Generator",
+    title: "Password Generator",
     description: "Random Password Generator with Javascript and React",
     live: <Link href='https://password-generator-xi-azure.vercel.app'>Live</Link>,
     repo: <Link href="https://github.com/Gogo602/Password-Generator.git">Repo</Link>,
@@ -110,11 +125,10 @@ const SelectedWork = () => {
     }
 
     // useEffect to check ref.
-    useEffect(() => {
-        if (projectsSectionRef.current) {
-          //  console.log("Ref is attached:", projectsSectionRef.current);
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (projectsSectionRef.current) {
+    //     }
+    // }, []);
  
 
   return (
@@ -142,7 +156,7 @@ const SelectedWork = () => {
                   y: -10,
                   transition: { duration: 0.2 }
                 }}
-                className='group relative h-[500px] rounded-3xl overflow-hidden bg-surface border border-white/10 cursor-pointer'
+                className='group relative h-[530px] pb-5 rounded-3xl overflow-hidden bg-surface border border-white/10 cursor-pointer'
               >
                 <motion.div className='h-1/2 w-full relative'>
                   <Image
