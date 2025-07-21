@@ -48,7 +48,7 @@ const Footer = () => {
                   </div>
                   <div>
                       <h3 className='text-lg font-semibold text-gray-50 mb-4'>Connect</h3>
-                      <ul className='space-x-1  flex md:block'>
+                      <ul className='space-x-2  flex md:block'>
                             <a
                                 href={socialLinks.github}
                                 className=''>

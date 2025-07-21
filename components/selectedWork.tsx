@@ -3,7 +3,7 @@
 import { ArrowUpRightIcon } from '@heroicons/react/16/solid';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from "react-icons/io";
@@ -69,7 +69,7 @@ const projects = [
   },
   {
     title: "Findash",
-    description: "Findash is a modern, intuitive user dashboard designed to help you track your cryptocurrency and stock investments in one place",
+    description: "Findash is a modern dashboard designed to help you track your cryptocurrency and stock investments in one place",
     live: <Link href='https://findash-phi.vercel.app'>Live</Link>,
     repo: <Link href="https://github.com/Gogo602/FinDash.git">Repo</Link>,
     tech: [
@@ -145,7 +145,7 @@ const SelectedWork = () => {
           <div className='w-32 h-2 bg-gradient-to-r from-green-800 to-gray-800  rounded-full'></div>
 
           {/* project grid */}
-          <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 relative z-10 mt-10'>
+          <div className='grid grid-cols-1 sm:px-20 md:px-0 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10 mt-10'>
             {displayedProjects.map((project, i) => (
               <motion.div
                 key={i}
@@ -156,7 +156,7 @@ const SelectedWork = () => {
                   y: -10,
                   transition: { duration: 0.2 }
                 }}
-                className='group relative h-[530px] pb-5 rounded-3xl overflow-hidden bg-surface border border-white/10 cursor-pointer'
+                className='group relative h-[550px] md:h-[530px] pb-5 rounded-3xl overflow-hidden bg-surface border border-white/10 cursor-pointer'
               >
                 <motion.div className='h-1/2 w-full relative'>
                   <Image

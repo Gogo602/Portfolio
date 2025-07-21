@@ -71,7 +71,7 @@ const Hero = () => {
               }}
               className='w-full h-full aspect-square rounded-3xl overflow-hidden border border-white p-5 opacity-50 bg-surface backdrop-blur-sm'
             >
-              <Image src="/Gogo.jpg" alt='Avata' fill className=' scale-110 group-hover:scale-100 transition-transform duration-500 z-10' />
+              <Image src="/Gogo.jpg" alt='Avata' fill={true} className=' scale-110 group-hover:scale-100 transition-transform duration-500 z-10' />
               <div
               className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent'
               />
