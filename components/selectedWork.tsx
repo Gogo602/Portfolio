@@ -27,7 +27,7 @@ const projects = [
       { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
       { name: "Framer-Motion", icon: FiFramer, color: "#FFFF00" },
     ],
-    image: '/agriconLand.PNG'
+    image: '/agriconland.PNG'
   },
   {
     title: "Currency Converter",
@@ -65,7 +65,7 @@ const projects = [
       { name: "React", icon: FaReact, color: "#61DAFB" },
       { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
     ],
-    image: '/admindashboard.png'
+    image: '/admindashboard.PNG' 
   },
   {
     title: "Findash",
