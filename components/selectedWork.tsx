@@ -11,6 +11,7 @@ import { SiTailwindcss } from 'react-icons/si';
 import { SiAppwrite } from "react-icons/si";
 import { RiNextjsLine } from "react-icons/ri";
 import { FiFramer } from "react-icons/fi";
+import { TbApiOff } from "react-icons/tb";
 
 
 
@@ -26,6 +27,7 @@ const projects = [
       { name: "React", icon: FaReact, color: "#61DAFB" },
       { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
       { name: "Framer-Motion", icon: FiFramer, color: "#FFFF00" },
+      { name: "Backend API", icon: TbApiOff, color: "#FFFF00" },
     ],
     image: '/agriconland.PNG'
   },
@@ -132,7 +134,7 @@ const SelectedWork = () => {
  
 
   return (
-    <section className='py-32 relative' id="work" ref={projectsSectionRef}>
+    <section className='py-32 relative' id='work' ref={projectsSectionRef}>
       <div className='max-w-7xl mx-auto px-6'>
         {/* section heading  */}
         <motion.div

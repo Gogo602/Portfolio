@@ -3,6 +3,7 @@ import { ParticleCanvas } from '@/hooks/particle'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
+import Link  from 'next/link'
 
 const Hero = () => {
   return (
@@ -39,9 +40,11 @@ const Hero = () => {
               <motion.button
                 whileHover={{scale: 1.05, transition:{duration:0.2}}}
                 className='text-gray-50 px-4 py-1 font-bold rounded-lg bg-gradient-to-r from-green-800 to-gray-800 shadow-md shadow-green-800 border-2 border-green-800'>Download Resume</motion.button>
-              <motion.button
-                whileHover={{scale: 1.05, transition:{duration:0.2}}}
-                className='border px-4 py-1 text-gray-50 font-bold rounded-lg shadow-md shadow-green-800' id='contact'> Contact Me</motion.button>
+              <Link
+                href='/#contact'
+                className='border px-4 py-1 text-gray-50 font-bold rounded-lg shadow-md shadow-green-800'>
+                Contact Me
+              </Link>
             </motion.div>
           </div>
         </motion.div>
