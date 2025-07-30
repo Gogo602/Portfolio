@@ -7,7 +7,7 @@ import Link  from 'next/link'
 
 const Hero = () => {
   return (
-    <div className='bg-gradient-to-r from-gray-900 opacity-96 to-green-950 min-h-screen relative overflow-hidden px-10 md:px-20'>
+    <div className='bg-gradient-to-r from-gray-900 opacity-96 to-green-950 min-h-screen relative overflow-hidden px-5 md:px-20'>
       <ParticleCanvas/>
       <div className='flex flex-col lg:flex-row items-center gap-16'>
         <motion.div
