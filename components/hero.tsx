@@ -39,10 +39,10 @@ const Hero = () => {
               className='space-x-5 space-y-5'>
               <motion.button
                 whileHover={{scale: 1.05, transition:{duration:0.2}}}
-                className='text-gray-50 px-4 py-1 font-bold rounded-lg bg-gradient-to-r from-green-800 to-gray-800 shadow-md shadow-green-800 border-2 border-green-800'>Download Resume</motion.button>
+                className='text-gray-50 px-4 py-2 font-bold rounded-lg bg-gradient-to-r from-green-800 to-gray-800 shadow-md shadow-green-800 border-2 border-green-800'>Download Resume</motion.button>
               <Link
                 href='/#contact'
-                className='border px-4 py-2 text-gray-50 font-bold rounded-lg shadow-md shadow-green-800'>
+                className='border px-4 py-3 text-gray-50 font-bold rounded-lg shadow-md shadow-green-800'>
                 Contact Me
               </Link>
             </motion.div>
